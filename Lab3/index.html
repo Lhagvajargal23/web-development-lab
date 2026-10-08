@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 03</title>
+    <!-- 5. Google Fonts (Google Fonts сонгох) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- 1. External CSS файлайтай холбох -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 4. Position: absolute (Badge) -->
+        <span class="badge">Шинэ</span>
+
+        <!-- 2. Class сонгогч ашиглан гарчиг, тайлбар загварчлах -->
+        <h2 class="title">Бүртгэлийн форм</h2>
+        <p class="description">Сургалтад бүртгүүлэхийн тулд мэдээллээ оруулна уу.</p>
+
+        <form action="#" method="post">
+            <div class="field">
+                <label for="name">Нэр:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="field">
+                <!-- 4. Position: relative/absolute (Tooltip жишээ) -->
+                <label for="email">
+                    И-мэйл:
+                    <span class="tooltip-box">
+                        <span class="icon">?</span>
+                        <span class="tooltip">Албан ёсны и-мэйлээ бичнэ үү</span>
+                    </span>
+                </label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <!-- 2. Товчийг загварчлах -->
+            <button type="submit" class="btn">Илгээх</button>
+        </form>
+    </div>
+
+</body>
+</html>

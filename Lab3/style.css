@@ -1,0 +1,111 @@
+/* 5. Өнгө, фонт (Google Fonts) сонгох, тогтмол дизайны хэв маяг */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* 3. Box model (padding, border, border-radius, margin) ашиглах */
+.container {
+    /* 4. Position: relative (Badge болон Tooltip-д зориулсан) */
+    position: relative;
+    background-color: #ffffff;
+    width: 350px;
+    padding: 25px;
+    margin: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* 2. Class сонгогч: Гарчиг, тайлбар загварчлах */
+.title {
+    margin-top: 0;
+    color: #1a252f;
+}
+
+.description {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Box model: Талбаруудыг амьсталуулах */
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 2. Class сонгогч: Товчийг загварчлах */
+.btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* 4. Position: absolute (Badge жишээ) */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* 4. Position: relative/absolute (Tooltip жишээ) */
+.tooltip-box {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 12px;
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 160px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 11px;
+    
+    /* Position absolute жишээ */
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.tooltip-box:hover .tooltip {
+    visibility: visible;
+}
