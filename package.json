@@ -1,0 +1,18 @@
+{
+  "name": "web-development-lab7",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sass": "sass --watch scss/main.scss:css/style.css",
+    "build": "sass --style=compressed --no-source-map scss/main.scss:css/style.min.css"
+  },
+  "devDependencies": {
+    "sass": "^1.106.1"
+  },
+  "description": "",
+  "main": "script.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

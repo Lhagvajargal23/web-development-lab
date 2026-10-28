@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зургийн цомог портал — Лаборатори 07</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Агуулга руу алгасах</a>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="header__logo">
+      <svg class="header__logo-icon" viewBox="0 0 24 24" width="28" height="28" role="img" aria-labelledby="logo-title">
+        <title id="logo-title">Камерын дүрс</title>
+        <rect x="2" y="6" width="20" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 6l1.5-3h5L16 6" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span>Зургийн цомог</span>
+    </div>
+    <nav class="header__nav" aria-label="Үндсэн цэс">
+      <a class="header__link" href="#gallery">Нүүр</a>
+      <a class="header__link" href="#video">Видео</a>
+      <a class="header__link" href="#map">Байршил</a>
+      <a class="header__link" href="#footer">Холбоо барих</a>
+    </nav>
+    <div class="header__controls">
+      <button type="button" class="header__btn" id="flip-all" aria-pressed="false">Бүх карт эргүүлэх</button>
+      <button type="button" class="header__btn" id="theme-toggle" aria-pressed="false">Харанхуй горим</button>
+    </div>
+  </header>
+
+  <!-- Layout Container -->
+  <div class="layout">
+
+    <!-- Main Content -->
+    <main class="layout__main">
+      <section class="section" aria-labelledby="gallery-title">
+        <h2 class="section__title" id="gallery-title">Gallery</h2>
+        <p class="section__hint">Картан дээр хулганаар очих, Tab-аар фокуслах, эсвэл Enter/Space дарж эргүүлнэ.</p>
+
+        <ul id="gallery" class="gallery">
+          <li class="gallery__item" style="--i:0">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card__inner">
+                <span class="card__face card__face--front"><img class="card__image" src="img/photo1.jpg" alt="Уулын оройд мандаж буй нар" loading="lazy" width="400" height="300"></span>
+                <span class="card__face card__face--back"><strong class="card__title">Нар мандалт</strong><span>Хэнтий, 2026</span></span>
+              </span>
+            </button>
+          </li>
+          <li class="gallery__item" style="--i:1">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card__inner">
+                <span class="card__face card__face--front"><img class="card__image" src="img/photo2.jpg" alt="Нуурын эрэг дээрх ганц мод" loading="lazy" width="400" height="300"></span>
+                <span class="card__face card__face--back"><strong class="card__title">Нуурын эрэг</strong><span>Хөвсгөл, 2026</span></span>
+              </span>
+            </button>
+          </li>
+          <li class="gallery__item" style="--i:2">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card__inner">
+                <span class="card__face card__face--front"><img class="card__image" src="img/photo3.jpg" alt="Говийн элсэн манхан" loading="lazy" width="400" height="300"></span>
+                <span class="card__face card__face--back"><strong class="card__title">Элсэн манхан</strong><span>Говь, 2025</span></span>
+              </span>
+            </button>
+          </li>
+          <li class="gallery__item" style="--i:3">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card__inner">
+                <span class="card__face card__face--front"><img class="card__image" src="img/photo4.jpg" alt="Хотын шөнийн гэрэл" loading="lazy" width="400" height="300"></span>
+                <span class="card__face card__face--back"><strong class="card__title">Шөнийн хот</strong><span>Улаанбаатар, 2026</span></span>
+              </span>
+            </button>
+          </li>
+          <li class="gallery__item" style="--i:4">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card__inner">
+                <span class="card__face card__face--front"><img class="card__image" src="img/photo5.jpg" alt="Намрын шар навчтай ой" loading="lazy" width="400" height="300"></span>
+                <span class="card__face card__face--back"><strong class="card__title">Намрын ой</strong><span>Тэрэлж, 2025</span></span>
+              </span>
+            </button>
+          </li>
+          <li class="gallery__item" style="--i:5">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card__inner">
+                <span class="card__face card__face--front"><img class="card__image" src="img/photo6.jpg" alt="Цас бүрсэн нуруу" loading="lazy" width="400" height="300"></span>
+                <span class="card__face card__face--back"><strong class="card__title">Өвлийн нуруу</strong><span>Алтай, 2026</span></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="video" aria-labelledby="video-title">
+        <h2 class="section__title" id="video-title">Видео</h2>
+        <video class="media" controls preload="metadata" poster="img/photo1.jpg" width="640" height="360">
+          <source src="video/clip.webm" type="video/webm">
+          <source src="video/clip.mp4" type="video/mp4">
+          <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+          <p>Таны хөтөч видео дэмжихгүй байна. <a href="video/clip.mp4">Видеог татах</a>.</p>
+        </video>
+      </section>
+
+      <section class="section" id="map" aria-labelledby="map-title">
+        <h2 class="section__title" id="map-title">Байршил</h2>
+        <iframe class="media"
+          title="Улаанбаатар хотын OpenStreetMap газрын зураг"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=106.80%2C47.88%2C107.05%2C47.96&amp;layer=mapnik"
+          width="640" height="360"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin"
+          referrerpolicy="no-referrer"></iframe>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 class="sidebar__title">Хажуугийн цэс</h3>
+      <ul class="sidebar__list">
+        <li class="sidebar__item">Байгаль</li>
+        <li class="sidebar__item">Хот</li>
+        <li class="sidebar__item">Аялал</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <p>&copy; 2026 Бүх эрх хуулиар хамгаалагдсан.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

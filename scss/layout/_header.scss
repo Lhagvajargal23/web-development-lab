@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.header {
+  @include flex-row-wrap(rem(15px));
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bar);
+  color: var(--bar-text);
+  padding: rem(15px) rem(30px);
+
+  @include respond("md") { padding: rem(15px); }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  &__logo-icon { color: var(--accent); }
+
+  &__nav { @include flex-row-wrap(rem(20px)); }
+
+  &__link {
+    display: inline-block;
+    color: var(--bar-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s var(--ease);
+
+    &:hover,
+    &:focus-visible { color: var(--accent); transform: translateY(-2px); }
+  }
+
+  &__controls { @include flex-row-wrap(rem(8px)); }
+
+  &__btn {
+    font: inherit;
+    padding: rem(6px) rem(14px);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--bar-text);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease), background-color 0.2s, color 0.2s;
+
+    &:hover,
+    &:focus-visible,
+    &[aria-pressed="true"] { background: var(--accent); color: var(--accent-contrast); }
+
+    &:hover,
+    &:focus-visible { transform: translateY(-2px) scale(1.04); }
+  }
+}

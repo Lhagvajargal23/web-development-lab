@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "tokens" as *;
+
+// max-width media query (Lab6-тай ижил)
+@mixin respond($bp) {
+  @if not map.has-key($breakpoints, $bp) {
+    @error "Тодорхойгүй breakpoint: #{$bp}";
+  }
+  @media (max-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin flex-center($dir: row, $gap: null) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin flex-row-wrap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}

@@ -1,0 +1,12 @@
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .gallery__item { opacity: 1; }
+  .header__link:hover, .header__link:focus-visible,
+  .header__btn:hover, .header__btn:focus-visible { transform: none; }
+}

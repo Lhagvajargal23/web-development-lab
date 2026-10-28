@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+.section {
+  &__title { margin: rem(24px) 0 rem(12px); color: var(--heading); }
+  &__hint  { color: var(--muted); margin-bottom: rem(16px); }
+
+  &:first-child .section__title { margin-top: 0; }
+}

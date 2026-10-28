@@ -1,0 +1,6 @@
+@use "../abstracts" as *;
+
+@each $name, $value in $colors {
+  .u-text-#{$name} { color: var(--#{$name}); }
+  .u-bg-#{$name}   { background-color: $value; color: contrast($value); }
+}

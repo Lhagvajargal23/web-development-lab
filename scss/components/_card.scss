@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+.card {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: var(--radius-md);
+
+  &__inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform var(--dur) var(--ease);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &:hover .card__inner,
+  &:focus-visible .card__inner,
+  &--flipped .card__inner { transform: rotateY(180deg); }
+
+  &__face {
+    @include flex-center(column, rem(4px));
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    &--front { background: var(--surface); }
+    &--back {
+      background: var(--back);
+      color: #fff;
+      transform: rotateY(180deg);
+      text-align: center;
+      padding: rem(16px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, var(--accent), var(--back));
+  }
+
+  &__title { font-size: 1.2rem; }
+}
