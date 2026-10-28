@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+@each $name, $value in $spacing {
+  .u-mt-#{$name} { margin-top: rem($value); }
+  .u-mb-#{$name} { margin-bottom: rem($value); }
+  .u-p-#{$name}  { padding: rem($value); }
+}

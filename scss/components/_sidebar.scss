@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.sidebar {
+  flex: 1;
+  background-color: var(--surface);
+  padding: var(--gap);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  height: fit-content;
+
+  &__title { margin-bottom: rem(15px); color: var(--heading); }
+  &__list  { list-style: none; }
+  &__item  { padding: rem(8px) 0; border-bottom: 1px solid var(--line); }
+}

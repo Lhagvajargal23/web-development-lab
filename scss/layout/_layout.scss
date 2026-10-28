@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  padding: var(--gap);
+  max-width: rem(1200px);
+  margin: 0 auto;
+  width: 100%;
+
+  @include respond("md") { flex-direction: column; }
+
+  &__main { flex: 3; min-width: 0; }
+}

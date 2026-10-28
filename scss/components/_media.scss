@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.media {
+  display: block;
+  width: 100%;
+  max-width: rem(640px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: #000;
+  box-shadow: var(--shadow-lg);
+}
