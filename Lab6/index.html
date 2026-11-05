@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зургийн цомог портал — Лаборатори 06</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Агуулга руу алгасах</a>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" width="28" height="28" role="img" aria-labelledby="logo-title">
+        <title id="logo-title">Камерын дүрс</title>
+        <rect x="2" y="6" width="20" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 6l1.5-3h5L16 6" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span>Зургийн цомог</span>
+    </div>
+    <nav class="nav" aria-label="Үндсэн цэс">
+      <a href="#gallery">Нүүр</a>
+      <a href="#video">Видео</a>
+      <a href="#map">Байршил</a>
+      <a href="#footer">Холбоо барих</a>
+    </nav>
+    <div class="controls">
+      <button type="button" id="flip-all" aria-pressed="false">Бүх карт эргүүлэх</button>
+      <button type="button" id="theme-toggle" aria-pressed="false">Харанхуй горим</button>
+    </div>
+  </header>
+
+  <!-- Layout Container -->
+  <div class="layout-container">
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Gallery</h2>
+        <p class="hint">Картан дээр хулганаар очих, Tab-аар фокуслах, эсвэл Enter/Space дарж эргүүлнэ.</p>
+
+        <ul id="gallery" class="card-grid">
+          <li style="--i:0">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card-inner">
+                <span class="card-face card-front"><img src="img/photo1.jpg" alt="Уулын оройд мандаж буй нар" loading="lazy" width="400" height="300"></span>
+                <span class="card-face card-back"><strong>Нар мандалт</strong><span>Хэнтий, 2026</span></span>
+              </span>
+            </button>
+          </li>
+          <li style="--i:1">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card-inner">
+                <span class="card-face card-front"><img src="img/photo2.jpg" alt="Нуурын эрэг дээрх ганц мод" loading="lazy" width="400" height="300"></span>
+                <span class="card-face card-back"><strong>Нуурын эрэг</strong><span>Хөвсгөл, 2026</span></span>
+              </span>
+            </button>
+          </li>
+          <li style="--i:2">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card-inner">
+                <span class="card-face card-front"><img src="img/photo3.jpg" alt="Говийн элсэн манхан" loading="lazy" width="400" height="300"></span>
+                <span class="card-face card-back"><strong>Элсэн манхан</strong><span>Говь, 2025</span></span>
+              </span>
+            </button>
+          </li>
+          <li style="--i:3">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card-inner">
+                <span class="card-face card-front"><img src="img/photo4.jpg" alt="Хотын шөнийн гэрэл" loading="lazy" width="400" height="300"></span>
+<span class="card-face card-back"><strong>Шөнийн хот</strong><span>Улаанбаатар, 2026</span></span>
+              </span>
+            </button>
+          </li>
+          <li style="--i:4">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card-inner">
+                <span class="card-face card-front"><img src="img/photo5.jpg" alt="Намрын шар навчтай ой" loading="lazy" width="400" height="300"></span>
+                <span class="card-face card-back"><strong>Намрын ой</strong><span>Тэрэлж, 2025</span></span>
+              </span>
+            </button>
+          </li>
+          <li style="--i:5">
+            <button type="button" class="card" aria-pressed="false">
+              <span class="card-inner">
+                <span class="card-face card-front"><img src="img/photo6.jpg" alt="Цас бүрсэн нуруу" loading="lazy" width="400" height="300"></span>
+                <span class="card-face card-back"><strong>Өвлийн нуруу</strong><span>Алтай, 2026</span></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section id="video" aria-labelledby="video-title">
+        <h2 id="video-title">Видео</h2>
+        <video controls preload="metadata" poster="img/photo1.jpg" width="640" height="360">
+          <source src="video/clip.webm" type="video/webm">
+          <source src="video/clip.mp4" type="video/mp4">
+          <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+          <p>Таны хөтөч видео дэмжихгүй байна. <a href="video/clip.mp4">Видеог татах</a>.</p>
+        </video>
+      </section>
+
+      <section id="map" aria-labelledby="map-title">
+        <h2 id="map-title">Байршил</h2>
+        <iframe
+          title="Улаанбаатар хотын OpenStreetMap газрын зураг"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=106.80%2C47.88%2C107.05%2C47.96&amp;layer=mapnik"
+          width="640" height="360"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin"
+          referrerpolicy="no-referrer"></iframe>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Хажуугийн цэс</h3>
+      <ul>
+        <li>Байгаль</li>
+        <li>Хот</li>
+        <li>Аялал</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <p>&copy; 2026 Бүх эрх хуулиар хамгаалагдсан.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

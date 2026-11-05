@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зургийн цомог — Tailwind</title>
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
+  <nav class="bg-slate-100 dark:bg-slate-800">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-xl font-medium">Зургийн цомог</a>
+        <a href="#gallery" class="text-slate-600 hover:text-brand dark:text-slate-300">Нүүр</a>
+        <a href="#contact" class="text-slate-600 hover:text-brand dark:text-slate-300">Холбоо барих</a>
+      </div>
+      <button id="theme-toggle" type="button" class="rounded-md bg-brand px-4 py-2 text-white hover:bg-brand-dark">Харанхуй горим</button>
+    </div>
+  </nav>
+
+  <main class="mx-auto my-6 max-w-6xl px-4">
+    <h2 id="gallery" class="mb-4 text-3xl font-medium">Gallery</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <img src="../img/photo1.jpg" alt="Уулын оройд мандаж буй нар" class="h-52 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Нар мандалт</h5>
+          <p class="text-slate-600 dark:text-slate-300">Хэнтий, 2026</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <img src="../img/photo2.jpg" alt="Нуурын эрэг дээрх ганц мод" class="h-52 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Нуурын эрэг</h5>
+          <p class="text-slate-600 dark:text-slate-300">Хөвсгөл, 2026</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <img src="../img/photo3.jpg" alt="Говийн элсэн манхан" class="h-52 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Элсэн манхан</h5>
+          <p class="text-slate-600 dark:text-slate-300">Говь, 2025</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <img src="../img/photo4.jpg" alt="Хотын шөнийн гэрэл" class="h-52 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Шөнийн хот</h5>
+          <p class="text-slate-600 dark:text-slate-300">Улаанбаатар, 2026</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <img src="../img/photo5.jpg" alt="Намрын шар навчтай ой" class="h-52 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Намрын ой</h5>
+          <p class="text-slate-600 dark:text-slate-300">Тэрэлж, 2025</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+        <img src="../img/photo6.jpg" alt="Цас бүрсэн нуруу" class="h-52 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Өвлийн нуруу</h5>
+          <p class="text-slate-600 dark:text-slate-300">Алтай, 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="contact" class="mb-4 mt-10 text-3xl font-medium">Холбоо барих</h2>
+    <form class="space-y-4">
+      <div>
+        <label for="name" class="mb-1 block">Нэр</label>
+        <input id="name" type="text" required minlength="2"
+          class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 user-invalid:border-red-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100">
+      </div>
+      <div>
+        <label for="email" class="mb-1 block">Имэйл</label>
+        <input id="email" type="email" required
+          class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 user-invalid:border-red-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100">
+      </div>
+      <button type="submit" class="rounded-md bg-brand px-5 py-2 text-white hover:bg-brand-dark">Илгээх</button>
+    </form>
+  </main>
+
+  <script>
+    var root = document.documentElement;
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', dark ? 'light' : 'dark');
+      this.textContent = dark ? 'Харанхуй горим' : 'Цайвар горим';
+    });
+  </script>
+</body>
+</html>
