@@ -6,11 +6,12 @@
     <title>Лаборатори 05 - Responsive Web Design</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page-body">
 
     <!-- Header & Nav Bar -->
     <header class="navbar">
         <div class="logo">My Website</div>
+        <button class="menu-toggle" onclick="toggleMobileView()">☰</button>
         <nav class="nav-links">
             <a href="#" class="active">Нүүр</a>
             <a href="#">Мэдээ</a>
@@ -53,10 +54,19 @@
         </aside>
     </div>
 
+    <!-- Утасны харагдац болгох товч -->
+    <button class="view-switch-btn" onclick="toggleMobileView()">📱 Утасны харагдац</button>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Бүх эрх хуулиар хамгаалагдсан.</p>
     </footer>
 
+    <!-- JavaScript code -->
+    <script>
+        function toggleMobileView() {
+            document.body.classList.toggle('mobile-frame-view');
+        }
+    </script>
 </body>
 </html>
